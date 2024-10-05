@@ -7,11 +7,12 @@ export default function EditRecipe() {
   const { recipe } = location.state || {};
 
   const [title, setTitle] = useState(recipe ? recipe.title : '');
-  const [ingredients, setIngredients] = useState(recipe ? recipe.cookingTime : '');
+  const [ingredients, setIngredients] = useState(recipe ? recipe.ingredients.join(', ') : '');
   const [cookingTime, setCookingTime] = useState(recipe ? recipe.cookingTime : '');
   const [instructions, setInstructions] = useState(recipe ? recipe.instructions : '');
   const [imageUrl, setImageUrl] = useState(recipe ? recipe.imageUrl : '');
-  const [price, setPrice] = useState(recipe ? recipe.price : ''); 
+  const [price, setPrice] = useState(recipe ? recipe.price : '');
+  const [rating, setRating] = useState(recipe ? recipe.rating : 0); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,7 +24,8 @@ export default function EditRecipe() {
       cookingTime,
       instructions,
       imageUrl,
-      price: parseFloat(price) || 0, 
+      price: parseFloat(price) || 0,
+      rating: parseFloat(rating) || 0, 
     };
 
     try {
@@ -47,7 +49,7 @@ export default function EditRecipe() {
         <h1 className="text-3xl font-bold mb-6 text-center text-white">Edit Recipe</h1>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block text-sm font-medium text-gray-300">Title:-   </label>
+            <label className="block text-sm font-medium text-gray-300">Title:</label>
             <input
               type="text"
               value={title}
@@ -96,6 +98,20 @@ export default function EditRecipe() {
               onChange={(e) => setPrice(e.target.value)}
               placeholder="Enter price"
               className="mt-1 w-full p-3 bg-gray-700 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-300">Rating</label>
+            <input
+              type="number"
+              value={rating}
+              onChange={(e) => setRating(e.target.value)}
+              placeholder="Enter rating (0-5)"
+              className="mt-1 w-full p-3 bg-gray-700 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              min="0"
+              max="5"
+              step="0.1"
               required
             />
           </div>

@@ -1,28 +1,17 @@
 {
   "recipes": [
     {
-      "id": "c306",
-      "title": "hello",
-      "ingredients": [
-        "41"
-      ],
-      "cookingTime": "41",
-      "instructions": "hello",
-      "imageUrl": "https://img.freepik.com/free-photo/fresh-pasta-with-hearty-bolognese-parmesan-cheese-generated-by-ai_188544-9469.jpg",
-      "cuisineType": "parmesan",
-      "price": 11,
-      "rating": 3
-    },
-    {
       "id": "fb4e",
-      "title": "parmesan",
-      "ingredients": "parmesan",
+      "title": "parmesan111",
+      "ingredients": [
+        "3011"
+      ],
       "cookingTime": "30",
       "instructions": "parmesan",
       "imageUrl": "https://img.freepik.com/free-photo/fresh-pasta-with-hearty-bolognese-parmesan-cheese-generated-by-ai_188544-9469.jpg",
       "cuisineType": "3parmesan",
-      "price": "60",
-      "rating": 5
+      "price": 60,
+      "rating": 4.5
     }
   ]
 }
