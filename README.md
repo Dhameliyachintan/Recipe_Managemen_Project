@@ -20,7 +20,7 @@ json-server --watch db.json --port 4000
 npm install -g json-server
 
 # Tech Stack:
-Frontend: React.js for building reusable components and managing state.
+Frontend: React.js is used to build reusable components and manage the state.
 Styling: Tailwind CSS for utility-first styling, enabling rapid design iterations.
 Backend: JSON Server for serving a mock REST API, making it easy to handle requests and data.
 
@@ -28,6 +28,6 @@ Backend: JSON Server for serving a mock REST API, making it easy to handle reque
 Node.js and npm:
 Install Node.js which includes npm (Node Package Manager).
 
-# Frontend folder enter run commond
+# Frontend folder enter run command
  npm install
  npm run start
